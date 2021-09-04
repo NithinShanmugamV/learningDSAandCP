@@ -1,3 +1,18 @@
+/*
+In this program we will get one integer and print a 0-1 pyramid.
+For example, If you get 5,
+
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+
+*/
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
@@ -6,18 +21,11 @@ int main(){
         freopen("output.txt","w",stdout);
     #endif
     int n;
-    //cout<<"Enter number: ";
     cin>>n;
-    /*
-    for(int i=n;i>0;i--){
-        for(int j=1;j<=n;j++){
-            if(j<=i) cout<<j<<" ";
-        }
-        cout<<endl;
-    }*/
     for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            if(j<=n+1-i) cout<<j<<" ";
+        for(int j=1;j<=i;j++){
+            if((i+j)%2==0) cout<<"1"<<" " ;
+            else cout<<"0"<<" " ;
         }
         cout<<endl;
     }
